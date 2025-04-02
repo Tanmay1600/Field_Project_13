@@ -1,0 +1,86 @@
+.homepage-container {
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* About Us Section */
+  .homepage-about {
+    background-color: #e5a96e;
+    padding: 50px 10%;
+    height: 75vh;
+    text-align: left;
+  }
+  .homepage-image{
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+  .homepage-about-content h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .homepage-about-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .homepage-about-content p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .homepage-learn-more {
+    background-color: #008000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Services Section */
+  .homepage-services {
+    background-color: #f4f1e6;
+    padding: 50px 10%;
+  }
+  
+  .homepage-services-content h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .homepage-services-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .homepage-services-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .homepage-services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .homepage-service-item h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .homepage-service-item p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
