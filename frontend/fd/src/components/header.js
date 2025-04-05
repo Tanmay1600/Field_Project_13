@@ -1,40 +1,59 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../../styles/header.css';
-import logo from '../../assets/images/hastavem.png';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../styles/header.css";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
 
- 
+  // Function to toggle menu
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
+  };
+
   return (
-    <div className='nav_home' >
+    <div className="nav_home">
       <nav className="navbar">
+        {/* Left Side - Logo & Name */}
         <div className="navbar-left">
-          <div className='namanlogo'>
-            <div className="logo-container">
-              <img src={logo} alt="CanteenConnect Logo" className="logo" />
-            </div>
-            <Link to="/" className='sitename'>Ek Hath Madticha</Link>
-          </div>
-          <div className={`menu-toggle ${menuActive ? 'active' : ''}`} onClick={toggleMenu}>
-            <div></div>
-            <div></div>
-            <div></div>
+          <div className="namanlogo">
+            <img
+              src="/assets/logongo1.png"
+              alt="Ek Hath Madticha Logo"
+              className="logo"
+            />
+            <Link to="/" className="sitename">
+              Ek Hath Madticha
+            </Link>
           </div>
         </div>
-        <div className={`navbar-right ${menuActive ? 'active' : ''}`}>
-          
-          
-          
-            
-            <Link to="/wishlist" className="nav-button">Home</Link>
-            <Link to="/cart" className="nav-button">About us</Link>
-            <Link to="/orders" className="nav-button">What we do</Link>
-            <Link to="/orders" className="nav-button">Contact</Link>
-            <Link to="/orders" className="nav-button">Donate</Link>
-           
-          
+
+        {/* Menu Toggle Button (for Mobile) */}
+        <div
+          className={`menu-toggle ${menuActive ? "active" : ""}`}
+          onClick={toggleMenu}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        {/* Right Side - Navigation Links */}
+        <div className={`navbar-right ${menuActive ? "active" : ""}`}>
+          <Link to="/" className="nav-button">
+            Home
+          </Link>
+          <Link to="/about" className="nav-button">
+            About Us
+          </Link>
+          <Link to="/what-we-do" className="nav-button">
+            What We Do
+          </Link>
+          <Link to="/contact" className="nav-button">
+            Contact
+          </Link>
+          <Link to="/donate" className="nav-button donate-button">
+            Donate
+          </Link>
         </div>
       </nav>
     </div>

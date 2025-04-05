@@ -1,0 +1,346 @@
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu a:hover {
+    color: #4CAF50;
+  }
+  
+  .donate-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .donate-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Event Detail Page */
+  .event-detail-page {
+    width: 100%;
+  }
+  
+  /* Event Hero Section */
+  .event-hero {
+    background-color: #FFF8E1;
+    height: 70vh;
+    padding: 60px 0;
+    margin-bottom: 50px;
+  }
+  
+  .event-hero-content {
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .event-hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    max-width: 700px;
+  }
+  
+  .event-meta {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .event-date{
+    background-color: #FFF8E1;
+  }
+  
+  .event-location, .event-date {
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .location-icon, .date-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .location-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='[http://www.w3.org/2000/svg'](http://www.w3.org/2000/svg') viewBox='0 0 24 24' fill='%23555'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/%3E%3C/svg%3E");
+  }
+  
+  .date-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='[http://www.w3.org/2000/svg'](http://www.w3.org/2000/svg') viewBox='0 0 24 24' fill='%23555'%3E%3Cpath d='M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z'/%3E%3C/svg%3E");
+  }
+  
+  /* Events Schedule Section */
+  .events-schedule {
+    padding: 60px 0;
+  }
+  
+  .events-schedule h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .event-card {
+    display: flex;
+    background-color: #F9E076;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    margin-right: 20px;
+  }
+  
+  .event-day {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+  }
+  
+  .event-month {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+  }
+  
+  .event-details {
+    flex: 1;
+  }
+  
+  .event-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 5px;
+    position: relative;
+    display: inline-block;
+    padding-right: 30px;
+  }
+  
+  .event-label::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    width: 20px;
+    background-color: #666;
+    transform: translateY(-50%);
+  }
+  
+  .event-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .event-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .event-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+  }
+  
+  .arrow-icon {
+    font-size: 24px;
+    color: #333;
+    transition: transform 0.3s;
+  }
+  
+  .event-card:hover .arrow-icon {
+    transform: translateX(5px);
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 50px 40px;
+    margin-top: 80px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-brand h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section a:hover {
+    color: #fff;
+  }
+  
+  /* Page Background */
+  body {
+    background-color: #f9e0c3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      padding: 20px;
+    }
+    
+    .logo {
+      margin-bottom: 20px;
+    }
+    
+    .nav-menu ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .donate-btn {
+      margin-top: 15px;
+    }
+    
+    .event-hero h1 {
+      font-size: 32px;
+    }
+    
+    .event-meta {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .events-schedule h2 {
+      font-size: 28px;
+    }
+    
+    .event-card {
+      flex-direction: column;
+    }
+    
+    .event-date-box {
+      flex-direction: row;
+      margin-right: 0;
+      margin-bottom: 15px;
+      gap: 5px;
+    }
+    
+    .event-arrow {
+      margin-top: 15px;
+      justify-content: flex-end;
+    }
+    
+    .footer-nav {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }

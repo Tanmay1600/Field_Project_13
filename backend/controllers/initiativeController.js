@@ -31,13 +31,13 @@ export const getInitiativeById = async (req, res) => {
 // Add a new initiative
 export const addInitiative = async (req, res) => {
   try {
-    const { date, msg, image } = req.body;
+    const { title, date, msg, image } = req.body;
 
-    if (!date || !msg || !image) {
-      return res.status(400).json({ message: "All fields are required" });
+    if (!title || !date || !msg || !image) {
+      return res.status(400).json({ message: "All fields (title, date, msg, image) are required" });
     }
 
-    const newInitiative = new Initiative({ date, msg, image });
+    const newInitiative = new Initiative({ title, date, msg, image });
     await newInitiative.save();
 
     res.status(201).json({ message: "Initiative added successfully", newInitiative });
