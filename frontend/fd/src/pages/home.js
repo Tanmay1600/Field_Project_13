@@ -120,7 +120,7 @@ const Home = () => {
   <h2 className="contribution-heading">You can contribute to provide a place for children in need!</h2>
   <div className="contribution-buttons">
     <button className="volunteer-btn">Join as a volunteer</button>
-    <button className="donate-btn">Donate</button>
+    <button className="donate-btn44">Donate</button>
   </div>
 </section>
 

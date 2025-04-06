@@ -6,9 +6,8 @@ import Header from "../components/header"; // Adjust the path if needed
 export default function WhatWeDo() {
   return (
     <>
-    <Header /> 
+    <Header />
     <div className="what-we-do-page">
-      
 
       {/* Hero Section */}
       <section className="hero-section">
@@ -22,7 +21,7 @@ export default function WhatWeDo() {
           </p>
         </div>
         <div className="hero-image">
-          <img src="/images/children-group.jpg" alt="Happy children" />
+          <img src="/assets/image.png" alt="Happy children" />
         </div>
       </section>
 
@@ -57,7 +56,7 @@ export default function WhatWeDo() {
             </div>
             <h3>Clothes</h3>
             <p>
-              We provide clothes with clothing donated by generous supporters.
+            We provide clothes with clothing donated by generous supporters. These items are carefully sorted and distributed to those in need.
             </p>
           </div>
         </div>
@@ -71,35 +70,32 @@ export default function WhatWeDo() {
         <div className="projects-container">
           <div className="project-card">
             <div className="project-image">
-              <img src="/images/clothes-donation.jpg" alt="Clothes Donation Drive" />
-            </div>
             <h3>Clothes Donation Drive</h3>
             <p>
               We provide children with clothing donated by generous supporters.
             </p>
             <button className="learn-more-btn">Learn more</button>
+            </div>
           </div>
 
           <div className="project-card">
             <div className="project-image">
-              <img src="/images/book-distribution.jpg" alt="Book Distribution" />
+              <h3>Book Distribution</h3>
+              <p>
+                We provide children with books, magazines, and educational materials to nurture their curiosity and love for learning.
+              </p>
+              <button className="learn-more-btn">Learn more</button>
             </div>
-            <h3>Book Distribution</h3>
-            <p>
-              We provide children with books, magazines, and educational materials to nurture their curiosity and love for learning.
-            </p>
-            <button className="learn-more-btn">Learn more</button>
           </div>
 
           <div className="project-card">
             <div className="project-image">
-              <img src="/images/teaching-session.jpg" alt="Teaching Session" />
+              <h3>Teaching Session</h3>
+              <p>
+                We offer regular teaching sessions to enhance education, help children learn to build a better and more successful future.
+              </p>
+              <button className="learn-more-btn">Learn more</button>
             </div>
-            <h3>Teaching Session</h3>
-            <p>
-              We offer regular teaching sessions to enhance education, help children learn to build a better and more successful future.
-            </p>
-            <button className="learn-more-btn">Learn more</button>
           </div>
         </div>
       </section>

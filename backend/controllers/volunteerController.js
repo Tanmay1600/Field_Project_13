@@ -29,13 +29,13 @@ export const getVolunteerById = async (req, res) => {
 // Add a new volunteer
 export const addVolunteer = async (req, res) => {
   try {
-    const { firstName, lastName, email, message } = req.body;
+    const { firstName, lastName, email, mobile, message } = req.body;
 
-    if (!firstName || !lastName || !email || !message) {
+    if (!firstName || !lastName || !email || !mobile || !message) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
-    const newVolunteer = new Volunteer({ firstName, lastName, email, message });
+    const newVolunteer = new Volunteer({ firstName, lastName, email, mobile, message });
     await newVolunteer.save();
 
     res.status(201).json({ message: "Volunteer added successfully", newVolunteer });

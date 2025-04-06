@@ -278,12 +278,13 @@ p {
 }
 
 .volunteer-btn,
-.donate-btn {
+.donate-btn44 {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  margin-left: auto;
 }
 
 .volunteer-btn {
@@ -291,7 +292,7 @@ p {
   color: white;
 }
 
-.donate-btn {
+.donate-btn44 {
   background-color: black;
   color: white;
 }

@@ -1,314 +1,325 @@
 /* About Us Page Styles */
 .about-us-page {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  
-  /* Header Styles - Similar to home page for consistency */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  
-  .logo img {
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .nav ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  .nav ul li {
-    margin: 0 15px;
-  }
-  
-  .nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .nav ul li a:hover {
-    color: #ff6b6b;
-  }
-  
-  .donate-btn {
-    background-color: black;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s;
-  }
-  
-  .donate-btn:hover {
-    background-color: black;
-  }
-  /* About Hero Section */
-  .about-hero {
-    background-color: #f8b878;
-    padding: 2rem 5%;
-    position: relative;
-  }
-  
-  .about-hero-content {
-    max-width: 800px;
-  }
-  
-  .about-hero-content h1 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #333;
-    margin-bottom: 1rem;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .about-hero-content h1:before {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    background-color: #333;
-    left: -40px;
-    top: 50%;
-  }
-  
-  .about-hero-content h2 {
-    font-size: 2.5rem;
-    color: #333;
-    max-width: 600px;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Main Image */
-  .main-image {
-    width: 100%;
-    padding: 0 5%;
-    margin-top: -100px;
-  }
-  
-  .main-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-top: -100px;
-  }
-  
-  /* Mission and Vision Section */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header Styles - Similar to home page for consistency */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.logo img {
+  width: 45px;
+  height: 190px;
+  margin-right: 10px;
+}
+.nav {
+  margin-left: auto; 
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav ul li {
+  padding-right: 1.35rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #ff6b6b;
+}
+
+.donate-btn {
+  background-color: black;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.donate-btn:hover {
+  background-color: black;
+}
+/* About Hero Section */
+.about-hero {
+  background-color: #f8b878;
+  padding: 2rem 5%;
+  position: relative;
+}
+
+.about-hero-content {
+  max-width: 1500px;
+}
+
+.about-hero-content h1 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about-hero-content h1:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  left: -40px;
+  top: 50%;
+}
+
+.about-hero-content h2 {
+  font-size: 2.5rem;
+  color: #333;
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+}
+.about-hero-content h4 {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+}
+
+/* Main Image */
+.main-image {
+  width: 100%;
+  padding: 0 5%;
+  margin-top: 100px;
+}
+
+.main-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+/* Mission and Vision Section */
+.mission-vision-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 5%;
+  gap: 2rem;
+  margin-bottom: 50px;
+}
+
+.mission-box, .vision-box {
+  flex: 1;
+}
+
+.mission-box h3, .vision-box h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.mission-box h4, .vision-box h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.mission-box p, .vision-box p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+  background-color: #f8b878;
+  height: 90vh;
+  padding: 4rem 5%;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.team-description {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: #333;
+}
+
+.team-members {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.team-member {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+
+.team-member h4 {
+  padding: 5px;
+  margin: 5px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: #666;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff6b6b;
+}
+
+/* Footer - Similar to home page for consistency */
+.footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-logo h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links h4, .footer-contact h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  text-align: left;
+  margin-top: 0;
+}
+
+.footer-links ul, .footer-contact ul {
+  list-style: none;
+}
+
+.footer-links li, .footer-contact li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a, .footer-contact a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover, .footer-contact a:hover {
+  color: #ff9f43;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
   .mission-vision-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 3rem 5%;
-    gap: 2rem;
-  }
-  
-  .mission-box, .vision-box {
-    flex: 1;
-  }
-  
-  .mission-box h3, .vision-box h3 {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .mission-box h4, .vision-box h4 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .mission-box p, .vision-box p {
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  /* Team Section */
-  .team-section {
-    background-color: #f8b878;
-    height: 60vh;
-    padding: 4rem 5%;
-    text-align: center;
-  }
-  
-  .team-section h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .team-description {
-    max-width: 700px;
-    margin: 0 auto 3rem;
-    color: #333;
+    flex-direction: column;
   }
   
   .team-members {
-    display: flex;
     justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
   }
   
-  .team-member {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 220px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .team-member:hover {
-    transform: translateY(-10px);
-  }
-  
-  .team-member img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-  }
-  
-  .team-member h4 {
-    padding: 1rem;
-    margin: 0;
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  .social-links {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1rem;
-    gap: 1rem;
-  }
-  
-  .social-links a {
-    color: #666;
-    transition: color 0.3s;
-  }
-  
-  .social-links a:hover {
-    color: #ff6b6b;
-  }
-  
-  /* Footer - Similar to home page for consistency */
-  .footer {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 4rem 5% 2rem;
+  .about-hero-content h2 {
+    font-size: 2rem;
   }
   
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
+    flex-direction: column;
   }
   
-  .footer-logo h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+  .team-member {
+    width: 180px;
   }
   
-  .footer-links h4, .footer-contact h4 {
-    color: #fff;
-    margin-bottom: 1rem;
-    text-align: left;
-    margin-top: 0;
+  .team-member img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero-content h2 {
+    font-size: 1.5rem;
   }
   
-  .footer-links ul, .footer-contact ul {
-    list-style: none;
+  .mission-box h4, .vision-box h4 {
+    font-size: 1.2rem;
   }
   
-  .footer-links li, .footer-contact li {
-    margin-bottom: 0.5rem;
+  .team-members {
+    gap: 1rem;
   }
-  
-  .footer-links a, .footer-contact a {
-    color: #ecf0f1;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-links a:hover, .footer-contact a:hover {
-    color: #ff9f43;
-  }
-  
-  .footer-bottom {
-    margin-top: 3rem;
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 992px) {
-    .mission-vision-container {
-      flex-direction: column;
-    }
-    
-    .team-members {
-      justify-content: center;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .nav {
-      display: none;
-    }
-    
-    .about-hero-content h2 {
-      font-size: 2rem;
-    }
-    
-    .footer-content {
-      flex-direction: column;
-    }
-    
-    .team-member {
-      width: 180px;
-    }
-    
-    .team-member img {
-      height: 180px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .about-hero-content h2 {
-      font-size: 1.5rem;
-    }
-    
-    .mission-box h4, .vision-box h4 {
-      font-size: 1.2rem;
-    }
-    
-    .team-members {
-      gap: 1rem;
-    }
-  }
+}

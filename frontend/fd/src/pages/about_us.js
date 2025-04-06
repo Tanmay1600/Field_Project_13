@@ -14,12 +14,13 @@ export default function AboutUs() {
         <div className="about-hero-content">
           <h1>KNOW ABOUT US</h1>
           <h2>We are a non-governmental organization</h2>
+          <h4>Our NGO is committed to creating positive change in our communities through sustainable development, education, and humanitarian initiatives. Driven by a passion for social justice and equality, we work tirelessly to empower marginalized groups, advocate for human rights, and provide essential resources to those in need. Our team of dedicated volunteers and professionals collaborates with local partners to implement impactful project. With transparency, compassion, and innovation at our core, we strive to build a brighter, more inclusive future for all.</h4>
         </div>
       </section>
 
       {/* Main Image */}
       <div className="main-image">
-        <img src="/images/team-photo.jpg" alt="Our team with children" />
+        <img src="/ngo_g.png" alt="Our team with children" />
       </div>
 
       {/* Mission and Vision */}
@@ -32,7 +33,7 @@ export default function AboutUs() {
         
         <div className="vision-box">
           <h3>OUR VISION</h3>
-          <h4>Provide more inclusive care to children around the world</h4>
+          <h4>Provide more inclusive care to children in our community</h4>
           <p>We are committed to making a difference by ensuring that every child has access to essential services and a safe environment where they can grow and learn.</p>
         </div>
       </div>
@@ -44,24 +45,19 @@ export default function AboutUs() {
         
         <div className="team-members">
           <div className="team-member">
-            <img src="/images/team/chetan.jpg" alt="Team Member" />
+            <img src="/ngo_n.png" alt="Team Member" />
             <h4>Chetan Chelke</h4>
             <h6>Founder</h6>
           </div>
           <div className="team-member">
-            <img src="/images/team/bhavesh.jpg" alt="Team Member" />
+            <img src="/ngo_o.png" alt="Team Member" />
             <h4>Bhavesh Shukla</h4>
             <h6>Co-Founder</h6>
           </div>
           <div className="team-member">
-            <img src="/images/team/kyle.jpg" alt="Team Member" />
-            <h4>Kyle Dsouza</h4>
+            <img src="/ngo_p.png" alt="Team Member" />
+            <h4>Kyle Obrien</h4>
             <h6>Head of Authority</h6>
-          </div>
-          <div className="team-member">
-            <img src="/images/team/adrian.jpg" alt="Team Member" />
-            <h4>Adrian Dson</h4>
-            <h6>Support Executive</h6>
           </div>
         </div>
       </section>
