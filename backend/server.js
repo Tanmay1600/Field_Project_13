@@ -5,10 +5,12 @@ import initiativeRoutes from "./routes/initiativeRoutes.js";
 import eventRoutes from "./routes/eventRoutes.js";
 import donationRoutes from "./routes/donationRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
+import cors from 'cors';
 dotenv.config();
 console.log(process.env.MONGO_URI);
 
 const app = express();
+app.use(cors()); 
 app.use(express.json());
 
 import { connectDB } from './config/db.js';
@@ -25,7 +27,7 @@ app.get('/', (req, res) => {
 }
 );
 
-app.listen(3000, () => {
+app.listen(5000, () => {
     connectDB();
-  console.log('Server is running on http://localhost:3000 ');
+  console.log('Server is running on http://localhost:5000 ');
 }   );

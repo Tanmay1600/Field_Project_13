@@ -1,9 +1,43 @@
 
-import React from "react";
+import React , { useEffect, useState } from "react";
 import "../styles/contact.css";
 import Header from "../components/header"; // Adjust the path if needed
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
+  
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:5000/api/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        alert("Thank you for contacting us!");
+        setFormData({ firstName: "", lastName: "", email: "", mobile: "", message: "" });
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    } catch (error) {
+      alert("Error submitting form. Server might be down.");
+    }
+  };
+  
   return (
     <>
     <Header />
@@ -35,37 +69,65 @@ export default function Contact() {
 
       {/* Form Section */}
       <section className="form-section">
-        <form className="form">
-          <div className="form-row">
-            <div className="input-group">
-              <label>First Name</label>
-              <input type="text" />
-            </div>
-            <div className="input-group">
-              <label>Last Name</label>
-              <input type="text"  />
-            </div>
-          </div>
-          <div className="form-row">
-            <div className="input-group">
-              <label>Email Id</label>
-              <input type="email" />
-            </div>
-            <div className="input-group">
-              <label>Subject</label>
-              <input type="text" />
-            </div>
-            <div className="input-group">
-              <label>Mobile No.</label>
-              <input type="text" />
-            </div>
-          </div>
-          <div className="input-group full-width">
-            <label>Message</label>
-            <textarea placeholder="Type your message..." rows="5" />
-          </div>
-          <button type="submit">Send message</button>
-        </form>
+      <form className="form" onSubmit={handleSubmit}>
+  <div className="form-row">
+    <div className="input-group">
+      <label>First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        value={formData.firstName}
+        onChange={handleChange}
+        required
+      />
+    </div>
+    <div className="input-group">
+      <label>Last Name</label>
+      <input
+        type="text"
+        name="lastName"
+        value={formData.lastName}
+        onChange={handleChange}
+        required
+      />
+    </div>
+  </div>
+  <div className="form-row">
+    <div className="input-group">
+      <label>Email Id</label>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+    </div>
+    <div className="input-group">
+      <label>Mobile No.</label>
+      <input
+        type="text"
+        name="mobile"
+        value={formData.mobile}
+        onChange={handleChange}
+        required
+      />
+    </div>
+  </div>
+  <div className="input-group full-width">
+    <label>Message</label>
+    <textarea
+      name="message"
+      placeholder="Type your message..."
+      rows="5"
+      value={formData.message}
+      onChange={handleChange}
+      required
+    />
+  </div>
+  <button type="submit">Send message</button>
+</form>
+
       </section>
 
       {/* Map Section */}

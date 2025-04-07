@@ -6,6 +6,41 @@ import Header from "../components/header"; // Adjust the path if needed
 
 const Home = () => {
   const [initiatives, setInitiatives] = useState([]);
+  const [events, setEvents] = useState([]);
+  const [showVolunteerForm, setShowVolunteerForm] = useState(false);
+const [formData, setFormData] = useState({
+  firstName: "",
+  lastName: "",
+  email: "",
+  mobile: "",
+  message: "",
+});
+const handleChange = (e) => {
+  setFormData({ ...formData, [e.target.name]: e.target.value });
+};
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await fetch("http://localhost:5000/api/volunteers/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      alert("Thank you for volunteering!");
+      setFormData({ firstName: "", lastName: "", email: "", mobile: "", message: "" });
+      setShowVolunteerForm(false);
+    } else {
+      alert("Failed to submit form. Please try again.");
+    }
+  } catch (err) {
+    alert("Error submitting form. Server might be down.");
+  }
+};
 
   useEffect(() => {
     fetch("http://localhost:3000/initiatives") // Replace with actual API endpoint
@@ -13,7 +48,19 @@ const Home = () => {
       .then((data) => setInitiatives(data))
       .catch((error) => console.error("Error fetching initiatives:", error));
   }, []);
-
+  useEffect(() => {
+  
+    fetch("http://localhost:5000/api/events/")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setEvents(data);
+      })
+      .catch((error) => {
+      });
+  }, []);
+  
   return (
 
     <>
@@ -119,10 +166,27 @@ const Home = () => {
   <img src="assets/contribution.png" alt="Children" className="contribution-image" />
   <h2 className="contribution-heading">You can contribute to provide a place for children in need!</h2>
   <div className="contribution-buttons">
-    <button className="volunteer-btn">Join as a volunteer</button>
+    <button className="volunteer-btn" onClick={() => setShowVolunteerForm(true)}>Join as a volunteer</button>
     <button className="donate-btn44">Donate</button>
   </div>
 </section>
+{showVolunteerForm && (
+  <div className="modal-overlay">
+    <div className="volunteer-form-container">
+      <h2>Join as a Volunteer</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} required />
+        <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} required />
+        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+        <input type="text" name="mobile" placeholder="Mobile" value={formData.mobile} onChange={handleChange} required />
+        <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} required />
+        <button type="submit">Submit</button>
+        <button type="button" className="cancel-btn" onClick={() => setShowVolunteerForm(false)}>Cancel</button>
+      </form>
+    </div>
+  </div>
+)}
+
 
 {/* Events Section */}
 <section className="events-section">
@@ -132,31 +196,31 @@ const Home = () => {
   </div>
 
   <div className="events-list">
-    <div className="event-card">
-      <div className="event-date">
-        <span>13</span>
-        <span>APR</span>
-      </div>
-      <div className="event-info">
-        <p className="event-tag">NEXT EVENTS</p>
-        <h4>A day with our wonderful children</h4>
-      </div>
-      <div className="event-arrow">➜</div>
-    </div>
+  {events.map((event) => {
+    const eventDate = new Date(event.dateTime);
 
-    <div className="event-card">
-      <div className="event-date">
-        <span>25</span>
-        <span>APR</span>
+    // Extract day and short month safely
+    const day = eventDate.toLocaleDateString("en-US", { day: "2-digit" });
+    const month = eventDate.toLocaleDateString("en-US", { month: "short" }).toUpperCase();
+
+    return (
+      <div className="event-card" key={event._id}>
+        <div className="event-date">
+          <span>{day}</span>
+          <span>{month}</span>
+        </div>
+        <div className="event-info">
+          <p className="event-tag">NEXT EVENTS</p>
+          <h4>{event.eventName}</h4>
+          <p className="event-msg">{event.msg}</p>
+        </div>
+        <div className="event-arrow">➜</div>
       </div>
-      <div className="event-info">
-        <p className="event-tag">NEXT EVENTS</p>
-        <h4>Seminar: Caring for children with autism</h4>
-      </div>
-      <div className="event-arrow">➜</div>
-    </div>
-  </div>
+    );
+  })}
+</div>
 </section>
+
 {/* Footer Section */}
 <footer className="footer">
         <div className="footer-container">
