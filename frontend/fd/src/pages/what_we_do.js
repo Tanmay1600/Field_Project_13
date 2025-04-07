@@ -7,12 +7,15 @@ export default function WhatWeDo() {
   return (
     <>
     <Header />
-    <div className="what-we-do-page">
+  <div className="what-we-do-page">
 
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="hero-content">
-          <h3>WHAT WE DO</h3>
+    <div className="hero-content">
+        <div className="section-heading">
+  <span className="heading-line"></span>
+  <p className="subheading">WHAT WE DO</p>
+</div>
           <h2>Our efforts span across Thane, Raigad and Sangli</h2>
           <p>
             Through our dedicated initiatives, we provide education, healthcare, and essential
@@ -22,7 +25,7 @@ export default function WhatWeDo() {
         </div>
         <div className="hero-image">
           <img src="/assets/image.png" alt="Happy children" />
-        </div>
+    </div>
       </section>
 
       {/* Services Section */}
@@ -64,8 +67,10 @@ export default function WhatWeDo() {
 
       {/* Projects Section */}
       <section className="projects-section">
-        <h3>PROJECTS WE HAVE DONE</h3>
-        <h2>Our mission is to create a sustainable and supportive environment where everyone can thrive</h2>
+      <div className="section-heading">
+  <span className="heading-line"></span>
+  <p className="subheading">PROJECTS WE HAVE DONE</p>
+</div>        <h2>Our mission is to create a sustainable and supportive environment where everyone can thrive</h2>
         
         <div className="projects-container">
           <div className="project-card">

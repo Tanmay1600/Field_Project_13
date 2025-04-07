@@ -10,17 +10,27 @@ export default function AboutUs() {
     <div className="about-us-page">
 
       {/* About Us Hero Section */}
-      <section className="about-hero">
-        <div className="about-hero-content">
-          <h1>KNOW ABOUT US</h1>
-          <h2>We are a non-governmental organization</h2>
-          <h4>Our NGO is committed to creating positive change in our communities through sustainable development, education, and humanitarian initiatives. Driven by a passion for social justice and equality, we work tirelessly to empower marginalized groups, advocate for human rights, and provide essential resources to those in need. Our team of dedicated volunteers and professionals collaborates with local partners to implement impactful project. With transparency, compassion, and innovation at our core, we strive to build a brighter, more inclusive future for all.</h4>
-        </div>
-      </section>
+      <section className="about-top">
+  <div className="left">
+    <div className="about-heading">
+      <span className="line1111"></span>
+      <p className="subheading">ABOUT US</p>
+    </div>
+    <h1>We are a non-governmental organization</h1>
+    <p>
+      Our NGO is committed to creating positive change in our communities through sustainable
+      development, education, and humanitarian initiatives. Driven by a passion for social justice and
+      equality, we work tirelessly to empower marginalized groups, advocate for human rights, and provide
+      essential resources to those in need. Our team of dedicated volunteers and professionals collaborates
+      with local partners to implement impactful projects. With transparency, compassion, and innovation
+      at our core, we strive to build a brighter, more inclusive future for all.
+    </p>
+  </div>
+</section>
 
       {/* Main Image */}
       <div className="main-image">
-        <img src="/ngo_g.png" alt="Our team with children" />
+        <img src="/assets/aboutimage.png" alt="Our team with children" />
       </div>
 
       {/* Mission and Vision */}
@@ -45,7 +55,7 @@ export default function AboutUs() {
         
         <div className="team-members">
           <div className="team-member">
-            <img src="/ngo_n.png" alt="Team Member" />
+            <img src="/assets/chetan.png" alt="Team Member" />
             <h4>Chetan Chelke</h4>
             <h6>Founder</h6>
           </div>

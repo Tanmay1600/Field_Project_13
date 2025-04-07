@@ -1,17 +1,23 @@
-/* What We Do Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =======================
+   Base Styling
+========================== */
 .what-we-do-page {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #333;
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* Header Styles - Similar to other pages for consistency */
+/* =======================
+   Header (unchanged)
+========================== */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 1rem 100px;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -30,9 +36,11 @@
   height: 40px;
   margin-right: 10px;
 }
+
 .nav {
-  margin-left: auto; 
+  margin-left: auto;
 }
+
 .nav ul {
   display: flex;
   list-style: none;
@@ -68,49 +76,39 @@
   background-color: #ff5252;
 }
 
-/* Hero Section */
+/* =======================
+   Hero Section
+========================== */
 .hero-section {
-  height: 70vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 5%;
-  background-color: #f8b878;
+  padding: 70px 100px;
+  background-color: #f4a261;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .hero-content {
   flex: 1;
-  padding-right: 2rem;
 }
 
-.hero-content h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #333;
-  margin-bottom: 1rem;
-  position: relative;
-  display: inline-block;
-}
-
-.hero-content h3:before {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  background-color: #333;
-  left: -40px;
-  top: 50%;
-}
-
-.hero-content h2 {
-  font-size: 2rem;
-  color: #333;
+/* .hero-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
   margin-bottom: 1.5rem;
+} */
+.hero-content h2 {
+  font-size: 40px;
+  font-weight: 800; /* Make it bolder */
+  color: #111;       /* Make it darker for more contrast */
 }
 
 .hero-content p {
-  color: #333;
-  line-height: 1.6;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
 }
 
 .hero-image {
@@ -124,18 +122,44 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Services Section */
+/* =======================
+   Section Headings
+========================== */
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.heading-line {
+  width: 40px;
+  height: 2px;
+  background-color: #333;
+}
+
+.subheading {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #222;
+  text-transform: uppercase;
+}
+
+/* =======================
+   Services Section
+========================== */
 .services-section1 {
-  height: 80vh;
-  padding: 4rem 5%;
-  background-color: #f9f3e6;
-  text-align: center;
+  padding: 70px 100px;
+  background-color: #f7e7b8;
+  text-align: left;
 }
 
 .services-section1 h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1.5rem;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111;
 }
 
 .services-container {
@@ -160,45 +184,31 @@
 }
 
 .service-card h3 {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 22px;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .service-card p {
-  color: #666;
+  font-size: 15px;
+  color: #555;
   line-height: 1.6;
 }
 
-/* Projects Section */
+/* =======================
+   Projects Section
+========================== */
 .projects-section {
-  height: 130vh;
-  padding: 4rem 5%;
-  background-color: #f8b878;
-}
-
-.projects-section h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #333;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.projects-section h3:before {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  background-color: #333;
-  left: -40px;
-  top: 50%;
+  padding: 70px 100px;
+  background-color: #f4a261;
+  text-align: left;
 }
 
 .projects-section h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 3rem;
+  font-size: 36px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 40px;
   max-width: 800px;
 }
 
@@ -206,6 +216,7 @@
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .project-card {
@@ -217,58 +228,47 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   position: relative;
 }
+
 .project-card:nth-child(1) .project-image {
   background-image: url('../assets1/image1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 600px; /* Increase height to show more of the image */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Align content to bottom */
-  padding: 20px; 
 }
-
 .project-card:nth-child(2) .project-image {
   background-image: url('../assets1/image2.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 600px; /* Increase height to show more of the image */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Align content to bottom */
-  padding: 20px; 
 }
-
 .project-card:nth-child(3) .project-image {
   background-image: url('../assets1/image3.png');
+}
+
+.project-image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px; /* Increase height to show more of the image */
+  height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Align content to bottom */
-  padding: 20px; 
-}
-
-.project-image{
-  width: 100%;
-  height: 200px;
+  justify-content: center;
+  padding: 20px;
   position: relative;
 }
 
+.project-card h3,
+.project-card p,
+.project-card .learn-more-btn {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
 .project-card h3 {
-  padding: 1.5rem 1.5rem 0.5rem;
+  font-size: 22px;
+  font-weight: 600;
   margin-top: 50px;
-  font-size: 1.5rem;
-  color: #333;
+  margin-bottom: 10px;
 }
 
 .project-card p {
-  padding: 0 1.5rem 1.5rem;
-  color: #666;
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -280,18 +280,16 @@
   margin-top: 30px;
   font-size: 14px;
   width: fit-content;
-  display: flex;
   margin-left: 20px;
   margin-right: auto;
+  padding: 8px 16px;
 }
-.project-card h3,
-.project-card p,
-.project-card .learn-more-btn {
-  position: relative; /* Make text appear above the background */
-  z-index: 2; /* Higher z-index to appear above the background */
-  color: white; /* Change text color to be visible on image */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+
+.learn-more-btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
+
 .project-image::after {
   content: '';
   position: absolute;
@@ -303,16 +301,14 @@
   z-index: 1;
 }
 
-.learn-more-btn:hover {
-  background-color: #45a049;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Footer */
+/* =======================
+   Footer
+========================== */
 .footer {
   background-color: #2c3e50;
   color: #fff;
-  padding: 4rem 5% 2rem;
+  padding: 70px 100px 2rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .footer-content {
@@ -323,33 +319,38 @@
 }
 
 .footer-logo h3 {
-  font-size: 1.8rem;
+  font-size: 24px;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.footer-links h4, .footer-contact h4 {
-  color: #fff;
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 16px;
+  font-weight: 600;
   margin-bottom: 1rem;
-  text-align: left;
-  margin-top: 0;
 }
 
-.footer-links ul, .footer-contact ul {
+.footer-links ul,
+.footer-contact ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-links li, .footer-contact li {
+.footer-links li,
+.footer-contact li {
   margin-bottom: 0.5rem;
 }
 
-.footer-links a, .footer-contact a {
+.footer-links a,
+.footer-contact a {
   color: #ecf0f1;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer-links a:hover, .footer-contact a:hover {
+.footer-links a:hover,
+.footer-contact a:hover {
   color: #ff9f43;
 }
 
@@ -360,21 +361,19 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Design */
+/* =======================
+   Responsive
+========================== */
 @media (max-width: 992px) {
   .hero-section {
     flex-direction: column;
+    padding: 50px 40px;
   }
-  
-  .hero-content {
-    padding-right: 0;
-    margin-bottom: 2rem;
-  }
-  
+
   .projects-container {
     justify-content: center;
   }
-  
+
   .project-card {
     width: 45%;
   }
@@ -384,25 +383,31 @@
   .nav {
     display: none;
   }
-  
-  .hero-content h2 {
-    font-size: 1.8rem;
+
+  .services-section1,
+  .projects-section {
+    padding: 50px 40px;
   }
-  
+
+  .hero-content h2 {
+    font-size: 40px;
+    font-weight: 800; /* Make it bolder */
+    color: #111;       /* Make it darker for more contrast */
+  }
   .services-container {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .service-card {
     width: 100%;
     max-width: 400px;
   }
-  
+
   .project-card {
     width: 100%;
   }
-  
+
   .footer-content {
     flex-direction: column;
   }
@@ -410,11 +415,27 @@
 
 @media (max-width: 576px) {
   .hero-content h2 {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
-  
-  .services-section1 h2, 
+
+  .services-section1 h2,
   .projects-section h2 {
-    font-size: 1.5rem;
+    font-size: 28px;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .section-heading {
+    padding-left: 40px;
+  }
+
+  .hero-section,
+  .services-section1,
+  .projects-section {
+    padding: 40px 30px;
+  }
+
+  .footer {
+    padding: 50px 30px 2rem;
   }
 }
