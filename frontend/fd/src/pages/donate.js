@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../styles/donate.css";
 import Header from "../components/header";
+import { Link } from 'react-router-dom';
+
 
 export default function Donation() {
   const [showForm, setShowForm] = useState(false);
@@ -59,7 +61,7 @@ export default function Donation() {
             </button>
           </div>
           <div className="hero-image">
-            <img src="/donation-box.jpg" alt="Donate" />
+            <img src="/assets/donation.png" alt="Donate" />
           </div>
         </section>
 
@@ -113,8 +115,6 @@ export default function Donation() {
           <div className="contribution-right">
             <div className="tabs">
               <span className="active">Overview</span>
-              <span>Impact</span>
-              <span>What You get</span>
             </div>
             <p className="tab-content">
               Through our initiatives, we ensure that every child in our vicinity has the opportunity to grow, learn, and succeed. Our dedicated team and volunteers work tirelessly to make a meaningful impact in their lives, offering guidance, mentorship, and essential resources.<br /><br />
@@ -130,6 +130,39 @@ export default function Donation() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, similique incidunt! Impedit cum ratione facilis corporis incidunt iusto neque commodi ducimus exercitationem voluptatibus debitis obcaecati excepturi voluptas quidem, quas ullam aliquam quibusdam accusantium nostrum id ipsam architecto fuga quasi quis! Vel quam sit esse, quasi iste consectetur dicta rem vitae blanditiis eius cupiditate doloremque est hic nostrum totam?
           </p>
         </section>
+        {/* Footer Section */}
+<footer className="footer">
+  <div className="footer-container">
+    {/* Brand Name */}
+    <div className="footer-brand">
+      <h2>Ek Hath Madticha</h2>
+    </div>
+
+    {/* Navigation Links */}
+    <div className="footer-links">
+      <div className="footer-column">
+        <ul>
+        <li><Link to="/"><h3>Home</h3></Link></li>
+        <li><Link to="/about">About Us</Link></li>
+        <li><Link to="/what-we-do">What We Do</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/donate">Donate</Link></li>
+        </ul>
+      </div>
+
+      <div className="footer-column">
+        <h3>Connect</h3>
+        <ul>
+        <li><a href="https://www.instagram.com/ekhatmadticha?igsh=MXR1Mmo2Z2h0cW4wZA==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="mailto:chetanchalke7795@gmail.com">Gmail</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div className="footer-copyright">
+    <p>© {new Date().getFullYear()} Ek Hath Madticha. All rights reserved.</p>
+  </div>
+</footer>
       </div>
     </>
   );

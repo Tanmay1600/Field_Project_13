@@ -71,7 +71,7 @@ body {
 }
 
 .donate-button1 {
-  background-color: #24c53f;
+  background-color: #4CAF50;
   color: white;
   padding: 12px 28px;
   font-size: 16px;
@@ -219,4 +219,78 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #0e0a08;
+  color: white;
+  padding: 60px 100px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-brand h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px; /* reduced from 100px to 60px */
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #d3d3d3;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.footer-copyright {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #ccc;
+  background-color: #000; /* Keep same as footer */
+  border-top: 1px solid #333;
 }

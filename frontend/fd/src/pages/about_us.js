@@ -3,6 +3,7 @@ import "../styles/about_us.css";
 import { Link } from "react-router-dom";
 import Header from "../components/header"; // Adjust the path if needed
 
+
 export default function AboutUs() {
   return (
     <>
@@ -60,55 +61,50 @@ export default function AboutUs() {
             <h6>Founder</h6>
           </div>
           <div className="team-member">
-            <img src="/ngo_o.png" alt="Team Member" />
+            <img src="/assets/bhavesh.png" alt="Team Member" />
             <h4>Bhavesh Shukla</h4>
             <h6>Co-Founder</h6>
           </div>
           <div className="team-member">
-            <img src="/ngo_p.png" alt="Team Member" />
-            <h4>Kyle Obrien</h4>
-            <h6>Head of Authority</h6>
+            <img src="/assets/bhushan.png" alt="Team Member" />
+            <h4>Bhushan Chalke</h4>
+            <h6>Executive</h6>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer Section */}
       <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-logo">
-            <h3>Ek Hath Madticha</h3>
+        <div className="footer-container">
+          {/* Brand Name */}
+          <div className="footer-brand">
+            <h2>Ek Hath Madticha</h2>
           </div>
-          
+      
+          {/* Navigation Links */}
           <div className="footer-links">
-            <h4>Home</h4>
-            <ul>
-              <li><Link to="/about_us">About Us</Link></li>
-              <li><Link to="/about_us">Team</Link></li>
-              <li><Link to="/what_we_do">What We Do</Link></li>
+            <div className="footer-column">
+              <ul>
+              <li><Link to="/"><h3>Home</h3></Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/what-we-do">What We Do</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-            </ul>
-          </div>
-          
-          <div className="footer-links">
-            <h4>More</h4>
-            <ul>
-            <li><Link to="/project_readmore">Projects</Link></li>
-            <li><Link to="/event_readmore">Events</Link></li>
-            <li><Link to="/donate">Donate</Link></li>
-            </ul>
-          </div>
-          
-          <div className="footer-contact">
-            <h4>Connect</h4>
-            <ul>
-              <li><a href="[https://instagram.com](https://instagram.com)">Instagram</a></li>
-            </ul>
+              <li><Link to="/donate">Donate</Link></li>
+              </ul>
+            </div>
+      
+            <div className="footer-column">
+              <h3>Connect</h3>
+              <ul>
+              <li><a href="https://www.instagram.com/ekhatmadticha?igsh=MXR1Mmo2Z2h0cW4wZA==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="mailto:chetanchalke7795@gmail.com">Gmail</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        
-        <div className="footer-bottom">
-          <p>&copy; 2025 Ek Hath Madticha. All rights reserved.</p>
-        </div>
+        <div className="footer-copyright">
+    <p>© {new Date().getFullYear()} Ek Hath Madticha. All rights reserved.</p>
+  </div>
       </footer>
     </div>
     </>

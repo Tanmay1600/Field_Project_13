@@ -2,6 +2,8 @@
 import React , { useEffect, useState } from "react";
 import "../styles/contact.css";
 import Header from "../components/header"; // Adjust the path if needed
+import { Link } from 'react-router-dom';
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -132,13 +134,41 @@ export default function Contact() {
 
       {/* Map Section */}
       <section className="map-section">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.5487001321544!2d72.97305501490445!3d19.12758018705647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b920b28298cf%3A0x9a1d97d229e2391b!2sSai%20Nagar%2C%20Anand%20Nagar%2C%20Thane%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1712386485803"
-          allowFullScreen=""
-          loading="lazy"
-          title="Google Map"
-        />
+        <img src="/assets/map.png" alt="Map" className="map-image" />
       </section>
+      {/* Footer Section */}
+<footer className="footer">
+  <div className="footer-container">
+    {/* Brand Name */}
+    <div className="footer-brand">
+      <h2>Ek Hath Madticha</h2>
+    </div>
+
+    {/* Navigation Links */}
+    <div className="footer-links">
+      <div className="footer-column">
+        <ul>
+        <li><Link to="/"><h3>Home</h3></Link></li>
+        <li><Link to="/about">About Us</Link></li>
+        <li><Link to="/what-we-do">What We Do</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/donate">Donate</Link></li>
+        </ul>
+      </div>
+
+      <div className="footer-column">
+        <h3>Connect</h3>
+        <ul>
+        <li><a href="https://www.instagram.com/ekhatmadticha?igsh=MXR1Mmo2Z2h0cW4wZA==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="mailto:chetanchalke7795@gmail.com">Gmail</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div className="footer-copyright">
+    <p>© {new Date().getFullYear()} Ek Hath Madticha. All rights reserved.</p>
+  </div>
+</footer>
     </div>
     </>
   );
