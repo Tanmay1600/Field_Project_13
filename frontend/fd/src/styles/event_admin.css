@@ -1,0 +1,77 @@
+.events-container {
+    padding: 30px;
+    width: 100%;
+    margin-left: 220px;
+  }
+  
+  .add-event-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-event-btn:hover {
+    background-color: #218838;
+  }
+  
+  .event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  
+  .event-form input,
+  .event-form textarea {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .event-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .event-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .events-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .events-table th,
+  .events-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .events-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
