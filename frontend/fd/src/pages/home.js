@@ -7,6 +7,8 @@ import Header from "../components/header"; // Adjust the path if needed
 const Home = () => {
   const [initiatives, setInitiatives] = useState([]);
   const [events, setEvents] = useState([]);
+  const [selectedEvent, setSelectedEvent] = useState(null);
+const [showEventPopup, setShowEventPopup] = useState(false);
   const [showVolunteerForm, setShowVolunteerForm] = useState(false);
 const [formData, setFormData] = useState({
   firstName: "",
@@ -186,7 +188,16 @@ const handleSubmit = async (e) => {
     </div>
   </div>
 )}
-
+{showEventPopup && selectedEvent && (
+  <div className="modal-overlay">
+    <div className="event-popup">
+      <h2>{selectedEvent.eventName}</h2>
+      <p><strong>Date:</strong> {new Date(selectedEvent.dateTime).toLocaleString()}</p>
+      <p>{selectedEvent.msg}</p>
+      <button onClick={() => setShowEventPopup(false)}>Close</button>
+    </div>
+  </div>
+)}
 
 {/* Events Section */}
 <section className="events-section">
@@ -212,9 +223,11 @@ const handleSubmit = async (e) => {
         <div className="event-info">
           <p className="event-tag">NEXT EVENTS</p>
           <h4>{event.eventName}</h4>
-          <p className="event-msg">{event.msg}</p>
         </div>
-        <div className="event-arrow">➜</div>
+        <div className="event-arrow" onClick={() => {
+  setSelectedEvent(event);
+  setShowEventPopup(true);
+}}>➜</div>
       </div>
     );
   })}

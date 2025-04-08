@@ -1,8 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/donate.css";
 import Header from "../components/header";
 
 export default function Donation() {
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    mobile: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:5000/api/donations/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        alert("Donation submitted successfully!");
+        setFormData({ fullName: "", mobile: "", email: "", message: "" });
+        setShowForm(false);
+      } else {
+        alert("Failed to submit donation.");
+      }
+    } catch (error) {
+      console.error("Error submitting donation:", error);
+      alert("Something went wrong!");
+    }
+  };
+
   return (
     <>
       <Header />
@@ -18,12 +54,53 @@ export default function Donation() {
             <p>
               When you donate, you’re supporting effective care to children with special needs—an investment in the leaders of tomorrow.
             </p>
-            <button className="donate-button1">Donate now</button>
+            <button className="donate-button1" onClick={() => setShowForm(!showForm)}>
+              {showForm ? "Close Form" : "Donate now"}
+            </button>
           </div>
           <div className="hero-image">
             <img src="/donation-box.jpg" alt="Donate" />
           </div>
         </section>
+
+        {/* Donation Form */}
+        {showForm && (
+          <section className="donation-form-section">
+            <form className="donation-form" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                value={formData.fullName}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="tel"
+                name="mobile"
+                placeholder="Mobile Number"
+                value={formData.mobile}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleChange}
+              />
+              <button type="submit">Submit Donation</button>
+            </form>
+          </section>
+        )}
 
         {/* Contribution Section */}
         <section className="contribution">

@@ -43,3 +43,22 @@ export const addVolunteer = async (req, res) => {
     res.status(500).json({ message: "Error adding volunteer", error });
   }
 };
+export const deleteVolunteer = async (req, res) => {
+  const { id } = req.params;
+  console.log(`Received request to delete volunteer with ID: ${id}`);
+
+  try {
+    const volunteer = await Volunteer.findByIdAndDelete(id);
+
+    if (!volunteer) {
+      console.log(`No volunteer found with ID: ${id}`);
+      return res.status(404).json({ message: "Volunteer not found" });
+    }
+
+    console.log(`Volunteer deleted successfully:`, volunteer);
+    res.status(200).json({ message: "Volunteer deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting volunteer:", error);
+    res.status(500).json({ message: "Error deleting volunteer", error });
+  }
+};

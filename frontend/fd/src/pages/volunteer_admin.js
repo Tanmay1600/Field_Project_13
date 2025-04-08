@@ -1,22 +1,35 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../styles/volunteer_admin.css"; // Assuming you have a CSS file for styling
+import "../styles/volunteer_admin.css";
 
 const VolunteerAdmin = () => {
   const [volunteers, setVolunteers] = useState([]);
 
-  useEffect(() => {
-    const fetchVolunteers = async () => {
-      try {
-        const res = await axios.get("http://localhost:5000/api/volunteers");
-        setVolunteers(res.data);
-      } catch (error) {
-        console.error("Error fetching volunteers:", error);
-      }
-    };
+  const fetchVolunteers = async () => {
+    try {
+      const res = await axios.get("http://localhost:5000/api/volunteers");
+      setVolunteers(res.data);
+    } catch (error) {
+      console.error("Error fetching volunteers:", error);
+    }
+  };
 
+  useEffect(() => {
     fetchVolunteers();
   }, []);
+
+  const handleDelete = async (id) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this volunteer?");
+    if (!confirmDelete) return;
+
+    try {
+      await axios.delete(`http://localhost:5000/api/volunteers/${id}`);
+      setVolunteers(volunteers.filter((vol) => vol._id !== id));
+    } catch (error) {
+      console.error("Error deleting volunteer:", error);
+      alert("Failed to delete volunteer.");
+    }
+  };
 
   return (
     <div style={{ display: "flex" }}>
@@ -43,6 +56,7 @@ const VolunteerAdmin = () => {
                 <th>Mobile</th>
                 <th>Message</th>
                 <th>Registered On</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -54,6 +68,21 @@ const VolunteerAdmin = () => {
                   <td>{vol.mobile || "N/A"}</td>
                   <td>{vol.message}</td>
                   <td>{new Date(vol.createdAt).toLocaleString()}</td>
+                  <td>
+                    <button
+                      onClick={() => handleDelete(vol._id)}
+                      style={{
+                        padding: "6px 10px",
+                        backgroundColor: "#dc3545",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "4px",
+                        cursor: "pointer",
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>

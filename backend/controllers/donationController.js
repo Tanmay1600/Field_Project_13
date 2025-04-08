@@ -3,17 +3,19 @@ import Donation from "../models/Donation.js";
 // Add a new donation
 export const addDonation = async (req, res) => {
   try {
-    const { fullName, mobile, email, image, message } = req.body;
+    const { fullName, mobile, email,message } = req.body;
 
     if (!fullName || !mobile || !email || !message) {
       return res.status(400).json({ message: "All fields except image are required" });
+      console.log("All fields except image are required")
     }
 
-    const newDonation = new Donation({ fullName, mobile, email, image, message });
+    const newDonation = new Donation({ fullName, mobile, email,  message });
     await newDonation.save();
 
     res.status(201).json({ message: "Donation added successfully", newDonation });
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: "Error adding donation", error });
   }
 };
