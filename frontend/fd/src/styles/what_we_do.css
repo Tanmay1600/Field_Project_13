@@ -511,9 +511,9 @@
   transition: background-color 0.3s ease;
 }
 
-.learn-more-btn:hover {
+/* .learn-more-btn:hover {
   background-color: #ff7a26;
-}
+} */
 .footer-copyright {
   text-align: center;
   padding: 15px 0;

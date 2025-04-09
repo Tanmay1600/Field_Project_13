@@ -93,8 +93,9 @@ const handleSubmit = async (e) => {
             We are committed to making a difference by ensuring that basic needs and
             educational opportunities reach those who need them most.
           </p>
-          <button className="learn-more-btn">Learn more</button>
-        </div>
+          <Link to="/about">
+      <button className="learn-more-btn">Learn more</button>
+    </Link>        </div>
       </section>
 
       <section className="services-section">
