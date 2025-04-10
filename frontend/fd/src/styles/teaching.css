@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #f4a261;
+    font-family: 'Poppins', sans-serif;
+    color: #2c2c2c;
+  }
+  
+  .mission-smile-container {
+    padding: 70px 100px;
+  }
+  
+  .section-label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    border-left: 4px solid #2c2c2c;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #2c2c2c;
+  }
+  
+  .description {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #3a3a3a;
+  }
+  
+  .image-section {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-section img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .bottom-section {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #3a3a3a;
+  }
+  

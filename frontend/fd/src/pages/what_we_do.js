@@ -77,27 +77,27 @@ export default function WhatWeDo() {
       <div className="initiative-card">
         <img src="/assets/image1.png" alt="Education Support" className="card-image" />
         <div className="card-overlay">
-          <h3>Education Support</h3>
-          <p>Providing quality education and resources to children in underserved communities.</p>
-          <button className="learn-more-btn1">Learn more</button>
+          <h3>Cloth Donation</h3>
+          <p>We provide children in need with clothes, ensuring they have the comfort and dignity every child deserves.</p>
+          <Link to="/cloth-donation"><button className="learn-more-btn1">Learn more</button></Link>    
         </div>
       </div>
 
       <div className="initiative-card">
         <img src="/assets/image2.png" alt="Healthcare Access" className="card-image" />
         <div className="card-overlay">
-          <h3>Healthcare Access</h3>
-          <p>Ensuring children receive essential medical care and health education.</p>
-          <button className="learn-more-btn1">Learn more</button>
+          <h3>Book Distribution</h3>
+          <p>We provide children with books, storybooks, and educational materials to nurture their curiosity and love for learning.</p>
+          <Link to="/book-distribution"><button className="learn-more-btn1">Learn more</button></Link>    
         </div>
       </div>
 
       <div className="initiative-card">
         <img src="/assets/image3.png" alt="Nutrition Programs" className="card-image" />
         <div className="card-overlay">
-          <h3>Nutrition Programs</h3>
-          <p>Fighting child malnutrition through daily meals and nutritional awareness.</p>
-          <button className="learn-more-btn1">Learn more</button>
+          <h3>Teaching Sessions</h3>
+          <p>By offering children a strong educational foundation, we empower them to build a better and more promising future.</p>
+          <Link to="/teaching"><button className="learn-more-btn1">Learn more</button></Link>    
         </div>
       </div>
         </div>

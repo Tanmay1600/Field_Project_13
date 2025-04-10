@@ -127,8 +127,7 @@ export default function Donation() {
         <section className="usage">
           <h2>How we use your donation</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, similique incidunt! Impedit cum ratione facilis corporis incidunt iusto neque commodi ducimus exercitationem voluptatibus debitis obcaecati excepturi voluptas quidem, quas ullam aliquam quibusdam accusantium nostrum id ipsam architecto fuga quasi quis! Vel quam sit esse, quasi iste consectetur dicta rem vitae blanditiis eius cupiditate doloremque est hic nostrum totam?
-          </p>
+          Every donation we receive goes directly into creating a meaningful impact in the lives of those who need it most. Whether it's clothing, books, food items, or educational supplies — we carefully collect, sort, and distribute your contributions through our verified outreach channels. Our volunteers ensure that every item reaches children, families, and communities that truly benefit from it. Nothing is wasted, and everything is handled with respect and care.          </p>
         </section>
         {/* Footer Section */}
 <footer className="footer">
