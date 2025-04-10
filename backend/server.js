@@ -12,7 +12,8 @@ console.log(process.env.MONGO_URI);
 const app = express();
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://ek-hath-madticha-admin-page.vercel.app'
+  'https://ek-hath-madticha-admin-page.vercel.app',
+  'https://ek-hath-madticha.vercel.app'
 ];
 
 app.use(cors({
