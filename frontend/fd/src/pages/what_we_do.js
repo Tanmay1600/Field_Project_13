@@ -70,7 +70,7 @@ export default function WhatWeDo() {
       <section className="projects-section">
       <div className="section-heading">
   <span className="heading-line"></span>
-  <p className="subheading">PROJECTS WE HAVE DONE</p>
+  <p className="subheading">OUR INITIATIVES</p>
 </div>        <h2>Our mission is to create a sustainable and supportive environment where everyone can thrive</h2>
         
 <div className="three-cards">
