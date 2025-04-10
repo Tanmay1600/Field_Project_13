@@ -20,7 +20,7 @@ export default function Donation() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/donations/", {
+      const response = await fetch("https://ek-hath-madticha-backend.onrender.com/api/donations/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

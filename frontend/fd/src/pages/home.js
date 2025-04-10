@@ -25,7 +25,7 @@ const handleChange = (e) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await fetch("http://localhost:5000/api/volunteers/", {
+    const response = await fetch("https://ek-hath-madticha-backend.onrender.com/api/volunteers/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const handleSubmit = async (e) => {
   }, []);
   useEffect(() => {
   
-    fetch("http://localhost:5000/api/events/")
+    fetch("https://ek-hath-madticha-backend.onrender.com/api/events/")
       .then((response) => {
         return response.json();
       })

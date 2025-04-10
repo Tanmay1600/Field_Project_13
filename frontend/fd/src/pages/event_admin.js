@@ -13,7 +13,7 @@ const EventAdmin = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/events");
+      const res = await axios.get("https://ek-hath-madticha-backend.onrender.com/api/events");
       console.log("API response:", res.data);  // <-- Add this line
       if (Array.isArray(res.data)) {
         setEvents(res.data);
@@ -29,7 +29,7 @@ const EventAdmin = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/events/${id}`);
+      await axios.delete(`https://ek-hath-madticha-backend.onrender.com/api/events/${id}`);
       fetchEvents(); // Refresh the list
     } catch (error) {
       console.error("Error deleting event:", error);
@@ -39,7 +39,7 @@ const EventAdmin = () => {
   const handleAddEvent = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/events/", formData);
+      await axios.post("https://ek-hath-madticha-backend.onrender.com/api/events/", formData);
       setFormData({ eventName: "", dateTime: "", msg: "" });
       setShowForm(false);
       fetchEvents();

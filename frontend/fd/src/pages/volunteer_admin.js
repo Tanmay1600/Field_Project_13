@@ -7,7 +7,7 @@ const VolunteerAdmin = () => {
 
   const fetchVolunteers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/volunteers");
+      const res = await axios.get("https://ek-hath-madticha-backend.onrender.com/api/volunteers");
       setVolunteers(res.data);
     } catch (error) {
       console.error("Error fetching volunteers:", error);
@@ -23,7 +23,7 @@ const VolunteerAdmin = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/volunteers/${id}`);
+      await axios.delete(`https://ek-hath-madticha-backend.onrender.com/api/volunteers/${id}`);
       setVolunteers(volunteers.filter((vol) => vol._id !== id));
     } catch (error) {
       console.error("Error deleting volunteer:", error);

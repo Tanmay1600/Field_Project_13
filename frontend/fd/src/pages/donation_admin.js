@@ -8,7 +8,7 @@ const DonationAdmin = () => {
   useEffect(() => {
     const fetchDonations = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/donations/");
+        const res = await axios.get("https://ek-hath-madticha-backend.onrender.com/api/donations/");
         setDonations(res.data);
       } catch (error) {
         console.error("Error fetching donations:", error);
